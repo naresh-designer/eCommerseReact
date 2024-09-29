@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import Container from "./Components/Container/Container";
+import { ThemeProvider } from "styled-components";
+import GlobalStyled from "./Styled/GlobalStyled";
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
-function App() {
+const App = () => {
+  const theme = {
+    common: {
+      orangeBg: "#936e53",
+      bg: "#f1eeea",
+      greenBg: "#8bc34a",
+      headingBg: "#000",
+      fontColor: "#ccc",
+      grayColor: "#413e3e",
+      blackColor: "#000000",
+      whiteColor: "#fff",
+      merriweatherFont: '"Josefin Sans", system-ui',
+      orangeColor: "#ba9173",
+      fontWeight: "normal",
+    },
+    mobile: {
+      smallM: "500px",
+      tab: "768px",
+    },
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <GlobalStyled />
+        <BrowserRouter>
+          <Header />
+          <Container />
+          <Footer />
+        </BrowserRouter>
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;
