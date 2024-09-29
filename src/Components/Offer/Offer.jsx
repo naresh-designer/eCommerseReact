@@ -37,6 +37,14 @@ const Wrapper = styled.section`
         justify-content:space-between;
         align-items:center;
     }
+
+    @media(width <= 450px){
+        .offer{
+            flex-wrap:wrap;
+        }
+    }
+
+   
 `
 
 export default Offer

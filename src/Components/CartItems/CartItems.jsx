@@ -19,7 +19,7 @@ const CartItems = ({data}) => {
   return (
     <div className='cart_items__list grid grid__five' >
         <div className='car_image__name' >
-            <div>
+            <div className='hide' >
             <figure>
                 <img src={image} alt={id} />
             </figure>
@@ -33,7 +33,7 @@ const CartItems = ({data}) => {
         </div>
 
         {/* Price */}
-        <div className='cart_price' >
+        <div className='cart_price hide' >
             <p><FormatePrice price={price} /></p>
         </div>
 
@@ -42,7 +42,7 @@ const CartItems = ({data}) => {
         <CardAmountToggle amount={amount} setDecre={()=>setDecre(id)} setIncre={()=>setIncre(id)} className='cart_items__amount' />
 
         {/* Sub Total */}
-        <p><FormatePrice price={price * amount} /></p>
+        <p className='hide' ><FormatePrice price={price * amount} /></p>
 
         {/* Remove */}
         <div className='remove_items'>

@@ -109,6 +109,12 @@ const Wrapper = styled.section`
         font-size:18px;
         color:${({theme}) => theme.common.greenBg };
     }
+
+    @media(width <= 500px){
+        .grid__two{
+            grid-template-columns:repeat(1, 1fr);
+        }
+    }
 `
 
 export default ProductDetailContent

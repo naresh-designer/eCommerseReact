@@ -16,7 +16,7 @@ const Shorting = () => {
             <div className='shorting__product' >
                 <p>{`${filter_products.length} Product Avilable`}</p>
             </div>
-            <div className='shorting__search' >
+            {/* <div className='shorting__search' >
                 <form action="#">
                     <label htmlFor="sort"></label>
                 <select name="sort" id="sort" >
@@ -29,7 +29,7 @@ const Shorting = () => {
                     <option value="z-a">z-a</option>
                 </select>
                 </form>
-            </div>
+            </div> */}
         </div>
     </Wrapper>
   )

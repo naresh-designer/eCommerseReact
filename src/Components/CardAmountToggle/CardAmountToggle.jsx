@@ -20,6 +20,7 @@ margin-right:auto;
   .card_amount{
     display:flex;
     align-items:center;
+    margin-top:30px;
 
     .amount{
       margin-left:15px;

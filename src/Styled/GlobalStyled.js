@@ -135,6 +135,19 @@ h6{
     justify-content:center;
 }
 
+
+@media(width <= 650px){
+    .grid__three{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+    
+@media(width <= 450px){
+    h1{
+        font-size:35px;
+    }
+}
+
 `;
 
 export default GlobalStyled;

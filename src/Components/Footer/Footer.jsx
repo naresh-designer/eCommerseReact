@@ -59,6 +59,16 @@ const MainFooter = styled.section`
             color:${({theme}) => theme.common.whiteColor };
         }
     }
+
+    @media(width <= 450px){
+    .copyright{
+        flex-wrap:wrap;
+
+        p{
+            color:${({theme}) => theme.common.whiteColor };
+        }
+    }
+    }
 `
 
 export default Footer

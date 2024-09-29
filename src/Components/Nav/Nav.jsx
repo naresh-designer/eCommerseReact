@@ -162,6 +162,21 @@ const MainNav = styled.nav`
     }
   }
 
+  .cart{
+      position:relative;
+      font-size:20px;
+
+      .cart__addProduct{
+        background-color:${({theme}) => theme.common.orangeColor };
+        color:${({theme}) => theme.common.whiteColor };
+        display:grid;
+        align-items:center;
+        text-align:center;
+        font-size:15px;
+        padding:10px 20px 8px;
+      }
+    }
+
   @media screen and (max-width:${({theme}) => theme.mobile.smallM }){
     ul{
       width:100%;

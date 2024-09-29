@@ -78,6 +78,14 @@ const Wrapper = styled.section`
             }
         }
     }
+
+    @media(width <= 500px){
+        ul{
+            li{
+                width:90%;
+            }
+        }
+    }
 `
 
 export default FaqsList

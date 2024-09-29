@@ -95,6 +95,19 @@ const Wrapper = styled.section`
             }
         }
     }
+
+
+    @media(width <= ${({theme}) => theme.mobile.tab }){
+        .policyList{
+
+            ul{
+                flex-wrap:wrap;
+
+                li{
+                    justify-content:center;
+                }
+            }
+        }
 `
 
 export default PolicyList

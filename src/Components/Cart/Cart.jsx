@@ -8,7 +8,6 @@ import FormatePrice from '../../Helpers/FormatePrice/FormatePrice';
 
 const Cart = () => {
     const {cart,clearCart,total_price,shipping_fee} = useCartContext()
-    console.log(cart);
 
     if(cart.length === 0){
         return(
@@ -23,9 +22,9 @@ const Cart = () => {
         <div className="main__wrapper">
             <div className='cart__list grid grid__five' >
                 <p>Item</p>
-                <p>Price</p>
+                <p className='hide' >Price</p>
                 <p>Quantity</p>
-                <p>SubTotal</p>
+                <p className='hide' >SubTotal</p>
                 <p>Remove</p>
             </div>
             <hr/>
@@ -146,6 +145,7 @@ padding-block:50px;
     .cart_two__button{
         display:flex;
         justify-content:space-between;
+        flex-wrap:wrap;
     }
 
     .red_button{
@@ -155,7 +155,7 @@ padding-block:50px;
         
     .order_total__amount{
         background-color:#f8f6f3;
-        width:400px;
+        max-width:400px;
         padding:50px 30px 30px;
     }
 
@@ -166,6 +166,16 @@ padding-block:50px;
 
     .order_total_subdata hr{
         margin-block:10px;
+    }
+
+    @media(width <= 500px){
+        .grid__five{
+            grid-template-columns:repeat(3, 1fr);
+        }
+        .hide{
+            display:none;
+        }
+        
     }
 `
 

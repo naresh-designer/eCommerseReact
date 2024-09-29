@@ -32,7 +32,7 @@ const AboutCart = () => {
             <Heading headingData={headingData} />
             <div className='team grid grid__three ' >
                 {
-                    aboutData.map((curElm) => {
+                    aboutData.slice(0,3).map((curElm) => {
                         return(
                            <AboutData key={curElm.id} curElm={curElm} />
                         )

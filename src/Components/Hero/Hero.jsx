@@ -46,8 +46,26 @@ const MainHero = styled.section`
     }
 
     .hero__image{
-        width:400px;
+        max-width:400px;
         margin:auto;
+    }
+
+    @media(width <= ${({theme}) => theme.mobile.tab }){
+        .hero__container{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    @media(width <= 550px){
+
+        .hero__tagLine{
+            font-size:40px;
+            line-height:50px;
+
+            h1{
+                font-size:30px;
+            }
+        }
     }
 `
 

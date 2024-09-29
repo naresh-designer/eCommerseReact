@@ -20,25 +20,12 @@ background-color:#f8f6f3;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:10px 0;
+      padding-block:10px;
     }
     
     
 
-    .cart{
-      position:relative;
-      font-size:20px;
-
-      .cart__addProduct{
-        background-color:${({theme}) => theme.common.orangeColor };
-        color:${({theme}) => theme.common.whiteColor };
-        display:grid;
-        align-items:center;
-        text-align:center;
-        font-size:15px;
-        padding:10px 20px 8px;
-      }
-    }
+    
 `
 
 export default Header

@@ -36,7 +36,7 @@ const colorsOnlyData = getUniqueData(all_products,"colors")
     <Wrapper>
         <div className='filter-search' >
             <form onSubmit={(e) => e.preventDefault() } >
-                <input type="text" name='text' value={text} onChange={updateFilterValue} placeholder='Search'  />
+                <input type="text" name='text' value={text} onChange={updateFilterValue} placeholder='Search Product'  />
             </form>
         </div>
 
@@ -176,6 +176,17 @@ const Wrapper = styled.section`
     .check_color{
             color:${({theme}) => theme.common.whiteColor };
         }
+
+
+    @media(width <= 850px){
+    .filter-category,.search-Filter,.filter_color,.formatPrice,.filter_clear{
+        display:none;
+    }
+        .filter-search{
+            margin-bottom:30px;
+        }
+        
+    }
 
     
 `

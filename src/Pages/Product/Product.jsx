@@ -32,6 +32,13 @@ const Product = () => {
 const Wrapper = styled.section`
   .grid_filter__columns{
     grid-template-columns:0.2fr 1fr;
+    margin-top:50px;
+  }
+
+  @media(width <= 820px){
+    .grid_filter__columns{
+      grid-template-columns:1fr;
+    }
   }
     
 `
